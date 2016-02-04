@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  name: MyString
+  whitewater_class: 1
+
+two:
+  description: MyString
+  name: MyString
+  whitewater_class: 1

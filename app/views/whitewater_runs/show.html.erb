@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @whitewater_run.description %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @whitewater_run.name %>
+</p>
+
+<p>
+  <strong>Whitewater class:</strong>
+  <%= @whitewater_run.whitewater_class %>
+</p>
+
+<%= link_to 'Edit', edit_whitewater_run_path(@whitewater_run) %> |
+<%= link_to 'Back', whitewater_runs_path %>
