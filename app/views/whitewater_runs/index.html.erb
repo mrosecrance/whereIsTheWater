@@ -2,29 +2,31 @@
 
 <h1>Listing Whitewater Runs</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Description</th>
-      <th>Name</th>
-      <th>Whitewater class</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Whitewater class</th>
+          <th>Description</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @whitewater_runs.each do |whitewater_run| %>
-      <tr>
-        <td><%= whitewater_run.description %></td>
-        <td><%= whitewater_run.name %></td>
-        <td><%= whitewater_run.whitewater_class %></td>
-        <td><%= link_to 'Show', whitewater_run %></td>
-        <td><%= link_to 'Edit', edit_whitewater_run_path(whitewater_run) %></td>
-        <td><%= link_to 'Destroy', whitewater_run, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <tbody>
+        <% @whitewater_runs.each do |whitewater_run| %>
+          <tr>
+            <td><%= whitewater_run.name %></td>
+            <td><%= whitewater_run.whitewater_class %></td>
+            <td><%= whitewater_run.description %></td>
+            <td><%= link_to 'Show', whitewater_run %></td>
+            <td><%= link_to 'Edit', edit_whitewater_run_path(whitewater_run) %></td>
+            <td><%= link_to 'Destroy', whitewater_run, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+</div>
 
 <br>
 

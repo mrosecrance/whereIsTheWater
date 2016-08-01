@@ -13,15 +13,12 @@
 
 ActiveRecord::Schema.define(version: 20151021001331) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "whitewater_runs", force: :cascade do |t|
-    t.string   "description"
-    t.string   "name"
-    t.integer  "whitewater_class"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.string   "description",      limit: 255
+    t.string   "name",             limit: 255
+    t.integer  "whitewater_class", limit: 4
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
   end
 
 end
